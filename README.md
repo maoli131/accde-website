@@ -2,6 +2,7 @@
 
 This contains the source code for our ACCDA project information website. This website is based on Landkit Theme by Good Themes. Heavy modification by Mao Li. 
 
+For more details regarding our capstone project, visit our [Github Repo](https://github.com/maoli131/accda/tree/maoli). 
 ### Documentation
 
 Development documentation is available at `src/html/docs/index.html` (or `dist/docs/index.html` once you've compiled), or visit http://landkit.goodthemes.co/docs/index.html.
