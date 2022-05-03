@@ -1,0 +1,128 @@
+<!--
+  THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/zh/editor.html?c=dataset-simple1
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  title: {
+    text: 'IoU: AdaptSegNet vs Source vs Adaptation Model',
+    x:'center',
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    data: ['AdaptSegNet', 'Source Model', 'Adaptation Model'],
+    x:'right',
+    margin: 10,
+  },
+  toolbox: {
+    show: true,
+    y:'bottom',
+    feature: {
+      dataView: { show: true, readOnly: false },
+      magicType: { show: true, type: ['line', 'bar'] },
+      restore: { show: true },
+      saveAsImage: { show: true }
+    }
+  },
+  calculable: true,
+  xAxis: [
+    {
+      fontSize:20,
+      type: 'category',
+      // prettier-ignore
+      data: ['road', 'sidewalk', 'building',
+      'traffic light', 'traffic sign', 'vegetation', 
+'sky', 'person', 'car', 'bus']
+    },
+  ],
+  yAxis: [
+    {
+      type: 'value'
+    }
+  ],
+  series: [
+        {
+      name: 'AdaptSegNet',
+      type: 'bar',
+      data: [
+        0.3633, 0.243, 0.3225,
+        0.094, 0.014, 0.2749, 0.6824,
+        0.04, 0.2723, 0.164
+      ],
+      markLine: {
+        data: [{ type: 'average', name: 'Avg' }]
+      }
+    },
+    {
+      name: 'Source Model',
+      type: 'bar',
+      data: [0.43437139589476914, 0.11158574093646945, 0.3455580628639898,
+      0.13245685682451233, 0.020893076087439885, 0.16246828670705055, 0.7352104508047312,
+      0.18701582159418692, 0.8301205800589725, 0.06321809195398778
+      ],
+      markLine: {
+        data: [{ type: 'average', name: 'Avg' }]
+      }
+    },
+    {
+      name: 'Adaptation Model',
+      type: 'bar',
+      data: [
+        0.7583347884807152, 0.4309166829191093, 0.4261253665448993, 0.11234240079498106,
+        0.002777226964650089, 0.2536152343620947, 0.8002441162742583, 0.20014538373460108,
+        0.741419201285275, 0.42022637323613843,
+      ],
+      markLine: {
+        data: [{ type: 'average', name: 'Avg' }]
+      }
+    },
+    
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

@@ -11,14 +11,23 @@
     <!-- NAVBAR -->
     {{> partials/navbar classList="navbar-light bg-white fixed-top" container="container" button="primary"}}
 
-    <!-- WELCOME -->
+    <!-- Introduction -->
     <section class="pt-4 pt-md-11">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-5 col-lg-6 order-md-2">
 
             <!-- Image -->
-            <img src="assets/img/overview.png" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
+            <!-- <img src="assets/img/overview.png" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100"> -->
+
+            <!-- Video -->
+            <div class="ratio ratio-16x9">
+              <video class="rounded-lg bg-light shadow-lg mw-md-150 mw-lg-130 mb-6 mb-md-0" src="assets/video/illustration-video.mp4" autoplay loop muted>
+                Sorry, your browser doesn't support embedded videos,
+                but don't worry, you can <a href="assets/video/illustration-video.mp4">download it</a>
+                and watch it with your favorite video player!
+              </video>
+            </div>
 
           </div>
           <div class="col-12 col-md-7 col-lg-6 order-md-1" data-aos="fade-up">
@@ -36,10 +45,10 @@
 
             <!-- Buttons -->
             <div class="text-center text-md-start">
-              <a href="https://github.com/maoli131/accda/tree/maoli" class="btn btn-primary shadow lift me-1">
+              <a href="assets/img/project-report-draft.pdf" class="btn btn-primary shadow lift me-1">
                 Project Report <i class="fe fe-arrow-right d-none d-md-inline ms-3"></i>
               </a>
-              <a href="docs/index.html" class="btn btn-primary-soft lift">
+              <a href="https://github.com/maoli131/accda/tree/maoli" class="btn btn-primary-soft lift">
                 Open-source Code
               </a>
             </div>
@@ -49,7 +58,7 @@
       </div> <!-- / .container -->
     </section>
 
-    <!-- FEATURES -->
+    <!-- Highlights -->
     <section class="py-8 py-md-11 border-bottom">
       <div class="container">
         <div class="row">
@@ -240,8 +249,8 @@
     <!-- Method -->
     <section class="pt-8 pt-md-11" id="method">
       <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-12 col-md-6">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
 
             <!-- Badge -->
             <span class="badge rounded-pill bg-success mb-3">
@@ -249,45 +258,23 @@
             </span>
 
             <!-- Heading -->
-            <h2>
+            <h1 class="fw-bold">
               ACCDA <span class="text-primary">actively</span> select samples for learning and adapts to targets <span class="text-primary">continously</span>.
-            </h2>
+            </h1>
 
             <!-- Text -->
-            <p class="lead text-muted mb-6 mb-md-0">
+            <p class="fs-lg text-muted mb-7">
               Our project has two sub-routines. First, we design the active sample selection strategies that yield the most informative, diverse and representative data points from the unseen target. 
               Second, we research on the continous adaptation approaches that best accumulate past knowledge. 
               We then combine our finding into the novel method, ACCDA, which actively selects samples and learns on the fly. 
+            </p>
+
           </div>
-          <div class="col-12 col-md-6 col-xl-5">
-
-            <div class="row gx-0">
-              <div class="col-4">
-
-                <!-- Image -->
-                <div class="w-150 mt-9 p-1 bg-white shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                  <img src="assets/img/photos/photo-13.jpg" class="img-fluid" alt="...">
-                </div>
-
-              </div>
-              <div class="col-4">
-
-                <!-- Image -->
-                <div class="w-150 p-1 bg-white shadow-lg" data-aos="fade-up">
-                  <img src="assets/img/photos/photo-14.jpg" class="img-fluid" alt="...">
-                </div>
-
-              </div>
-              <div class="col-4 position-relative">
-
-                <!-- Image -->
-                <div class="w-150 mt-11 float-end p-1 bg-white shadow-lg" data-aos="fade-up" data-aos-delay="150">
-                  <img src="assets/img/photos/photo-15.jpg" class="img-fluid" alt="...">
-                </div>
-
-              </div>
-            </div> <!-- / .row -->
-
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+              <!-- Image -->
+              <img class="position-relative img-fluid rounded-start shadow-lg" src="assets/img/method.png" alt="..." />
           </div>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
@@ -327,7 +314,7 @@
 
                 <!-- Text -->
                 <p class="text-muted mb-6 mb-md-0">
-                  ACCDA performs adversarial learning on the source samples for semantic segmentation. The backbone model is VGG16-Deeplab-v3. 
+                  ACCDA performs adversarial learning on the source samples for semantic segmentation, by minimizing cross-entropy loss. The backbone model is VGG16-Deeplab-v3.  
                 </p>
 
               </div>
@@ -443,7 +430,7 @@
               <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-gradient-multicolor rounded-4"></div>
 
               <!-- Image -->
-              <img class="position-relative w-100 w-md-150" src="assets/img/screenshots/desktop/dashkit-alt-mixed-cropped.png" alt="...">
+              <img class="position-relative w-100 w-md-100" src="assets/img/MADA.png" alt="...">
 
             </div>
 
@@ -487,7 +474,7 @@
                 <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-gradient-multicolor rounded-4"></div>
 
                 <!-- Image -->
-                <img class="position-relative w-100 w-md-120 float-end" src="assets/img/screenshots/ui/landkit-figma.png" alt="...">
+                <img class="position-relative w-100 w-md-120 float-end" src="assets/img/CDA.jpeg" alt="...">
 
               </div>
 
@@ -502,7 +489,7 @@
     </section>
 
     <!-- IMAGE -->
-    <section class="py-14 py-lg-16 jarallax" data-jarallax data-speed=".8" style="background-image: url(assets/img/covers/cover-12.jpg);">
+    <section class="py-14 py-lg-16 jarallax" data-jarallax data-speed=".8" style="background-image: url(assets/img/background.png);">
 
       <!-- Shape -->
       <div class="shape shape-top shape-fluid-x text-dark">
@@ -517,7 +504,7 @@
     </section>
 
     <!-- Result -->
-    <section class="pt-8 pt-md-11" id="result">
+    <section class="pt-8 pt-md-11" id="results">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10 col-lg-8 text-center">
@@ -529,42 +516,25 @@
 
             <!-- Heading -->
             <h1 class="fw-bold">
-              ACCDA achieves improvement upon existing methods
+              ACCDA <span class="text-primary">better generalizes</span> backbone models. 
             </h1>
 
             <!-- Text -->
             <p class="fs-lg text-muted mb-7">
-              TODO: in this section, we will include description and pictures of our experiment results. I also need some pictures for previous sections. 
+              The baseline AdaptSegnet model and our customized continous contiual segmentation model only achieve around 20% mIoU on target domain without adaptation. 
+              After adaptation with our designed replay buffer, we boosts the target domain performance to around 40% mIoU. Then by integrating our novel entropy-weighted
+              mutli-anchor active learning strategy, we pushes the performance further to be above 52% mIoU. 
             </p>
 
           </div>
         </div> <!-- / .row -->
         <div class="row">
-          <div class="col-12 order-md-2">
-
-            <!-- Macbook + iPhone -->
-            <div class="device-combo device-combo-macbook-iphonex mb-6 mb-md-0">
-
-              <!-- Macbook -->
-              <div class="device device-macbook">
-                <img src="assets/img/screenshots/desktop/dashkit-alt.jpg" class="device-screen" alt="...">
-                <img src="assets/img/devices/macbook.svg" class="img-fluid" alt="...">
-              </div>
-
-              <!-- iPhone -->
-              <div class="device device-iphonex">
-                <img src="assets/img/screenshots/mobile/dashkit-alt.jpg" class="device-screen" alt="...">
-                <img src="assets/img/devices/iphonex.svg" class="img-fluid" alt="...">
-              </div>
-
-            </div>
-
-          </div>
+          <iframe src="2d-plot.html" width="750" height="750"></iframe>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
     </section>
 
-    <!-- STATS -->
+    <!-- Result STATS -->
     <section class="pt-8 pt-md-11">
       <div class="container">
         <div class="row">
@@ -577,12 +547,12 @@
 
                   <!-- Heading -->
                   <h2 class="fw-bold text-center mb-0">
-                    <span data-countup='{"startVal": 0}' data-to="15" data-aos data-aos-id="countup:in"></span>M+
+                    <span data-countup='{"startVal": 0}' data-to="22" data-aos data-aos-id="countup:in"></span>% mIoU
                   </h2>
 
                   <!-- Text -->
                   <p class="text-center text-muted mb-0">
-                    Active users
+                    Baseline (w/o adaptation)
                   </p>
 
                 </div>
@@ -592,12 +562,12 @@
 
                   <!-- Heading -->
                   <h2 class="fw-bold text-center mb-0">
-                    0
+                    <span data-countup='{"startVal": 0}' data-to="20" data-aos data-aos-id="countup:in"></span>% mIoU
                   </h2>
 
                   <!-- Text -->
                   <p class="text-center text-muted mb-0">
-                    Data breaches
+                    Continous DA (w/o adaptation)
                   </p>
 
                 </div>
@@ -607,12 +577,12 @@
 
                   <!-- Heading -->
                   <h2 class="fw-bold text-center mb-0">
-                    <span data-countup='{"startVal": "0.00", "decimalPlaces": 2}' data-to="99.99" data-aos data-aos-id="countup:in"></span>%
+                    <span data-countup='{"startVal": "0"}' data-to="40" data-aos data-aos-id="countup:in"></span>% mIoU
                   </h2>
 
                   <!-- Text -->
                   <p class="text-center text-muted mb-0">
-                    Global uptime
+                    Continous DA (w/ adaptation + replay)
                   </p>
 
                 </div>
@@ -622,17 +592,43 @@
 
                   <!-- Heading -->
                   <h2 class="fw-bold text-center mb-0">
-                    <span data-countup='{"startVal": 0}' data-to="95" data-aos data-aos-id="countup:in"></span>M+
+                    <span data-countup='{"startVal": "0"}' data-to="52" data-aos data-aos-id="countup:in"></span>% mIoU
                   </h2>
 
                   <!-- Text -->
                   <p class="text-center text-muted mb-0">
-                    Terabytes
+                    ACCDA (replay buffer + entropy multi-anchor)
                   </p>
 
                 </div>
               </div>
             </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- Result 3D -->
+    <section class="pt-6 pt-md-8">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-sm-8 col-md-6 order-md-2">
+
+            <iframe src="3d-plot.html" width="750" height="750"></iframe>
+
+          </div>
+          <div class="col-12 col-md-6 col-lg-5" data-aos="fade-right">
+
+            <!-- Heading -->
+            <h1 class="fw-bold">
+              ACCDA <span class="text-primary">consistently improves</span> on unseen target. 
+            </h1>
+
+            <!-- Text -->
+            <p class="fs-lg text-muted mb-6">
+              The backbone network is able to achieve better and better performance on target domain, by utilizing active learning and continual, continous adaptation. 
+            </p>
 
           </div>
         </div> <!-- / .row -->
@@ -659,11 +655,11 @@
           <div class="col-12 col-md-auto">
 
             <!-- Button -->
-            <a href="#!" class="btn btn-primary-soft me-1 lift">
+            <a href="assets/img/project-report-draft.pdf" class="btn btn-primary-soft me-1 lift">
               Paper
             </a>
 
-            <a href="#!" class="btn btn-primary lift">
+            <a href="https://github.com/maoli131/accda/tree/maoli" class="btn btn-primary lift">
               Code
             </a>
 

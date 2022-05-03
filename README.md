@@ -1,6 +1,6 @@
-# LANDKIT
+# ACCDA
 
-Landkit Theme by Good Themes.
+This contains the source code for our ACCDA project information website. This website is based on Landkit Theme by Good Themes. Heavy modification by Mao Li. 
 
 ### Documentation
 
@@ -13,10 +13,6 @@ The steps to compile and get started with development are covered in detail in d
 - npm install
 - npm start
 
-### Design Files
+You may need to use Node.js 14 instead of the newest Node 16. To generatioon production files in `dist/`, run
 
-We provide an "unofficial" Landkit Figma file for you to play with. Learn more about it at https://www.figma.com/file/e6SElg0s79XUTzHfvJkbhV/LandKit-2.0.0-beta-Distsributed?node-id=2016%3A15971.
-
-### Support
-
-Good Themes is happy to provide support for issues. Shoot us an email at support@goodthemes.co and we'll get you squared away.
+- npm run build
