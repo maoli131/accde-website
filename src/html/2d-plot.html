@@ -56,10 +56,14 @@
     show: true,
     y:'bottom',
     feature: {
-      dataView: { show: true, readOnly: false },
-      magicType: { show: true, type: ['line', 'bar'] },
-      restore: { show: true },
-      saveAsImage: { show: true }
+      // dataView: { show: true, readOnly: false },
+      magicType: { show: true, type: ['line', 'bar'],
+      title: {
+        line: "Line",
+        bar: "Bar",
+      }},
+      restore: { show: true ,title: "Reset"},
+      saveAsImage: { show: true, title: "Save as Image" }
     }
   },
   calculable: true,
@@ -111,7 +115,7 @@
         0.741419201285275, 0.42022637323613843,
       ],
       markLine: {
-        data: [{ type: 'average', name: 'Avg' }]
+        data: [{ type: 'average', name: 'Avg', }]
       }
     },
     
