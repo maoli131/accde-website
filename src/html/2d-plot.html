@@ -41,14 +41,14 @@
 
     option = {
   title: {
-    text: 'IoU: AdaptSegNet vs Source vs Adaptation Model',
+    text: 'IoU: Baseline vs Continous DA vs ACCDA',
     x:'left',
   },
   tooltip: {
     trigger: 'axis'
   },
   legend: {
-    data: ['AdaptSegNet', 'Source Model', 'Adaptation Model'],
+    data: ['Baseline', 'Continous DA', 'ACCDA'],
     x:'right',
     margin: 10,
   },
@@ -84,35 +84,35 @@
   ],
   series: [
         {
-      name: 'AdaptSegNet',
+      name: 'Baseline',
       type: 'bar',
       data: [
-        0.3633, 0.243, 0.3225,
-        0.094, 0.014, 0.2749, 0.6824,
-        0.04, 0.2723, 0.164
+        0.466, 0.09, 0.475,
+        0.094, 0.014, 0.133, 0.73,
+        0.197, 0.863, 0.02,
       ],
       markLine: {
         data: [{ type: 'average', name: 'Avg' }]
       }
     },
     {
-      name: 'Source Model',
+      name: 'Continous DA',
       type: 'bar',
-      data: [0.43437139589476914, 0.11158574093646945, 0.3455580628639898,
-      0.13245685682451233, 0.020893076087439885, 0.16246828670705055, 0.7352104508047312,
-      0.18701582159418692, 0.8301205800589725, 0.06321809195398778
+      data: [0.83, 0.386, 0.554,
+      0.153, 0.020893076087439885, 0.16246828670705055, 0.84,
+      0.145, 0.855, 0,
       ],
       markLine: {
         data: [{ type: 'average', name: 'Avg' }]
       }
     },
     {
-      name: 'Adaptation Model',
+      name: 'ACCDA',
       type: 'bar',
       data: [
-        0.7583347884807152, 0.4309166829191093, 0.4261253665448993, 0.11234240079498106,
-        0.002777226964650089, 0.2536152343620947, 0.8002441162742583, 0.20014538373460108,
-        0.741419201285275, 0.42022637323613843,
+        0.893, 0.57, 0.656, 0.554,
+        0.121, 0.363, 0.918, 0.368,
+        0.981, 0.05,
       ],
       markLine: {
         data: [{ type: 'average', name: 'Avg', }]
